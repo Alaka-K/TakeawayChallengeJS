@@ -3,6 +3,7 @@ const Menu = require('./menu');
 class Takeaway {
     constructor () {
       this.orders = []
+      this.menu = new Menu()
 
     }
 
@@ -12,6 +13,10 @@ class Takeaway {
 
     addOrder (item) {
       return this.orders.push(item);
+    }
+
+    printMenu () {
+      return this.menu.printDishes ()
     }
 }
 

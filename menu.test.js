@@ -12,4 +12,5 @@ describe('Menu class', () => {
 
     expect(menu.printDishes()).toContain('The Rice cost £3');
   });
+
 });

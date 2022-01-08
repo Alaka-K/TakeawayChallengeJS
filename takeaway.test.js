@@ -6,9 +6,15 @@ describe('Takeaway', () => {
     expect(takeaway.getOrders()).toStrictEqual([]);
   });
 
-  it('add an item to order', () => {
+  // it('add an item to order', () => {
+  //   takeaway = new Takeaway();
+  //   addOrder('Rice');
+  //   expect(takeaway.getOrders().length).toEqual(1);
+  // });
+
+  it('prints the list of dishes', () =>{
     takeaway = new Takeaway();
-    addOrder('Rice');
-    expect(takeaway.getOrders().length).toEqual(1);
+    let menu = { printDishes: () => 'The Rice cost £3' };
+    expect(takeaway.printMenu()).toContain('The Rice cost £3');
   });
 }); 
