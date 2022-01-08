@@ -8,6 +8,12 @@ class Menu {
     getDishes () {
       return this.dishes
     }
+
+    printDishes () {
+        let dishes = this.dishes
+        return Object.entries(dishes).map(([key, value]) => {
+        return `The ${key} cost £${value}`})
+    }
 }
   
 module.exports = Menu;
